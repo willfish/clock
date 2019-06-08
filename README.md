@@ -1,21 +1,23 @@
 # Clock
 
-**TODO: Add description**
+Simple OTP clock application released built and run with Docker and distillery
 
-## Installation
+1. Build:
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `clock` to your list of dependencies in `mix.exs`:
+  `$ docker build -t william/clock:latest .`
 
-```elixir
-def deps do
-  [
-    {:clock, "~> 0.1.0"}
-  ]
-end
-```
+1. Run:
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/clock](https://hexdocs.pm/clock).
+  `$ docker run -it william/clock`
+
+    Initialized with interval 1000 ms
+    Clock Server ["0.1.0"] 2019-06-08T15:35:27.558008Z
+    Clock Server ["0.1.0"] 2019-06-08T15:35:28.562312Z
+    Clock Server ["0.1.0"] 2019-06-08T15:35:29.566681Z
+    Clock Server ["0.1.0"] 2019-06-08T15:35:30.572404Z
+    Clock Server ["0.1.0"] 2019-06-08T15:35:31.573434Z
+
+## Dependencies
+
+1. Docker
 
