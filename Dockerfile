@@ -10,7 +10,7 @@ RUN apk update && \
 
 COPY . .
 
-RUN mix do deps.get, compile --force, release && \
+RUN mix do deps.get, compile --force, release --silent && \
       find _build/ -iname clock.tar.gz -exec cp {} . \; && \
       mkdir -p /opt/app/ && \
       tar -xf clock.tar.gz -C /opt/app
@@ -18,7 +18,6 @@ RUN mix do deps.get, compile --force, release && \
 # Production Container
 
 FROM alpine:3.9
-ARG MIX_ENV
 ENV HOME=/opt/app
 
 RUN apk update && \
